@@ -8,9 +8,13 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.ReportFragment.Companion.reportFragment
 import com.example.project.databinding.ActivityMainBelajarBinding
+import com.google.firebase.Firebase
+import com.google.firebase.database.database
 import java.util.Collections
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var firebse:Firebase;
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,6 +36,8 @@ class MainActivity : AppCompatActivity() {
         val list = listOf(5,3,1,6)
         sortlist(list)
         println(list)
+        firebse.database.reference.key
+
     }
 
     private fun sortlist(list: List<Int>){
