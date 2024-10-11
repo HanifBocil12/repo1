@@ -27,17 +27,24 @@ class MainActivity : AppCompatActivity() {
             insets
         }
         var count = 0;
-        binding.input.setOnClickListener()
+        binding.button.setOnClickListener()
         {
-            count++
-            binding.password.setText("kpp")
+            val fristname = binding.firstnm.text.toString().toInt();
+            val lastname = binding.lastnm.text.toString().toInt();
+
+            val result = fristname + lastname
+            binding.textView2.text = result.toString()
         }
+//        binding.input.setOnClickListener()
+//        {
+//            count++
+//            binding.password.setText("kpp")
+//        }
 
         val list = listOf(5,3,1,6)
         sortlist(list)
         println(list)
-        firebse.database.reference.key
-
+//        firebse.database.reference.key
     }
 
     private fun sortlist(list: List<Int>){
