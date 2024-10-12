@@ -27,13 +27,25 @@ class MainActivity : AppCompatActivity() {
             insets
         }
         var count = 0;
+        var result = 0;
         binding.button.setOnClickListener()
         {
             val fristname = binding.firstnm.text.toString().toInt();
             val lastname = binding.lastnm.text.toString().toInt();
 
-            val result = fristname + lastname
+            result = fristname + lastname
             binding.textView2.text = result.toString()
+            if (result == 1)
+            {
+                binding.imgAngka.setImageResource(R.drawable.one)
+            }else if(result == 2)
+            {
+                binding.imgAngka.setImageResource(R.drawable.two)
+            }
+            else if (result == 3)
+            {
+                binding.imgAngka.setImageResource(R.drawable.three)
+            }
         }
 //        binding.input.setOnClickListener()
 //        {

@@ -9,9 +9,30 @@
     android:orientation="vertical"
     >
 
+    <?xml version="1.0" encoding="utf-8"?>
+    <menu xmlns:android="http://schemas.android.com/apk/res/android">
+        <!-- Hapus baris ini -->
+        <!-- <item
+            android:id="@+id/action_show_popup"
+            android:title="Show Popup"
+            android:orderInCategory="100"
+            android:showAsAction="never" /> -->
+    </menu>
+
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/img_angka"
+            android:layout_width="244dp"
+            android:layout_height="320dp"
+
+            android:scaleType="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="10dp" />
 
         <TextView
             android:id="@+id/textView2"
