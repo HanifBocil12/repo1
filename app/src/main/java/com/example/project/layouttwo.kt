@@ -7,10 +7,9 @@ import com.example.project.databinding.*
 
 class layouttwo: AppCompatActivity() {
     val bin = LayoutAsliBinding.inflate(layoutInflater)
-    override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
-        super.onCreate(savedInstanceState, persistentState)
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
 
         setContentView(R.layout.layout_asli)
-        bin.judul
     }
 }
