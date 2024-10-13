@@ -1,15 +1,14 @@
 package com.example.project
 
 import android.os.Bundle
-import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import androidx.lifecycle.ReportFragment.Companion.reportFragment
 import com.example.project.databinding.ActivityMainBelajarBinding
+import com.example.project.databinding.ToatBinding;
 import com.google.firebase.Firebase
-import com.google.firebase.database.database
 import java.util.Collections
 
 class MainActivity : AppCompatActivity() {
@@ -20,6 +19,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         val binding = ActivityMainBelajarBinding.inflate(layoutInflater)
+        val ding = ToatBinding.inflate(layoutInflater)
         setContentView(binding.root)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
@@ -28,6 +28,7 @@ class MainActivity : AppCompatActivity() {
         }
         var count = 0;
         var result = 0;
+
         binding.button.setOnClickListener()
         {
             val fristname = binding.firstnm.text.toString().toInt();
@@ -45,6 +46,11 @@ class MainActivity : AppCompatActivity() {
             else if (result == 3)
             {
                 binding.imgAngka.setImageResource(R.drawable.three)
+            }
+            Toast(this).apply {
+                duration = Toast.LENGTH_LONG
+                view = layoutInflater.inflate(R.layout.toat,ding.clToast)
+                show()
             }
         }
 //        binding.input.setOnClickListener()
